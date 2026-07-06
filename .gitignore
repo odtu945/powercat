@@ -1,4 +1,13 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Temp
+*.tmp
+*.log
+
+# Local Obsidian vault artifacts (do not commit vault state)
 .obsidian/workspace*
 .obsidian/cache
 .trash/
-*.tmp
