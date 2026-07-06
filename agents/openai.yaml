@@ -1,0 +1,8 @@
+interface:
+  display_name: "Obsidian AI 知识库整理"
+  short_description: "把 AI 相关 URL（仓库/文章/推文）整理进 Obsidian 知识库"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $obsidian-ai-kb to organize these AI URLs into my Obsidian knowledge base."
+
+policy:
+  allow_implicit_invocation: true
