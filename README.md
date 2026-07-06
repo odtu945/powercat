@@ -33,13 +33,35 @@ Sections grow dynamically — empty sections are never pre-created.
 
 ## Install
 
-Copy (or symlink) this folder into your Codex skills directory:
+### Option A — Codex skill-installer (recommended)
 
-```
-C:\Users\<you>\.codex\skills\obsidian-ai-kb
+This repo is a Codex skill. Install it with the bundled [skill-installer](https://github.com/openai/skills) helper, which downloads the skill into `$CODEX_HOME/skills` (defaults to `~/.codex/skills`):
+
+```bash
+# From the openai/skills repo helper scripts
+scripts/install-skill-from-github.py --repo odtu945/powercat --path .
 ```
 
-Then invoke it in Codex with, for example:
+or, equivalently, by URL:
+
+```bash
+scripts/install-skill-from-github.py --url https://github.com/odtu945/powercat
+```
+
+Options: `--ref <ref>` (default `main`), `--dest <path>`, `--method auto|download|git`.
+It aborts if the destination skill directory already exists. After installing, **restart Codex** to pick up the new skill.
+
+### Option B — Manual
+
+Clone this repo into your Codex skills directory:
+
+```bash
+git clone https://github.com/odtu945/powercat.git ~/.codex/skills/obsidian-ai-kb
+```
+
+### Use
+
+Once installed, invoke it in Codex with, for example:
 
 ```
 Use $obsidian-ai-kb to organize these AI URLs into my Obsidian knowledge base.
@@ -59,4 +81,4 @@ Use $obsidian-ai-kb to organize these AI URLs into my Obsidian knowledge base.
 
 ## License
 
-MIT
+[MIT](LICENSE) — Copyright (c) 2026 William Wang
